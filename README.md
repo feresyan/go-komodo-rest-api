@@ -1,4 +1,4 @@
-# Gokodomo Rest API
+# Gokomodo Rest API
 This is assignment project for Golang Developer in GoKomodo.
 
 ## Prerequisites
