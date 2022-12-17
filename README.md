@@ -33,7 +33,7 @@ That's it, you're ready to go.
 
 ### *Without Docker*
 
-- First make your gokodmodo database in MySQL DBMS.
+- First make your gokomodo database in MySQL DBMS.
 - Then adjust ip host or port for database config in env.yml
 ```yaml
 database:
