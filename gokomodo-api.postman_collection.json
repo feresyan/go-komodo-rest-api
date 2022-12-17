@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "d1f9f96d-fa22-4344-a1d1-c717edb16b96",
+		"name": "gokomodo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "buyer",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"test@email.com\",\n    \"password\" : \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/buyer/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"buyer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/buyer/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"buyer",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"buyer_id\":\"11\",\n    \"seller_id\":\"1\",\n    \"buyer_name\":\"Fero\",\n    \"delivery_source_address\":\"Bandung\",\n    \"delivery_destination_address\":\"Jakarta\",\n    \"product_id\":\"223b38c6-5c33-42b9-beb6-5b70ffb62e00\",\n    \"quantity\":2,\n    \"price\":10000,\n    \"total_price\": 20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/buyer/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"buyer",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"buyer_id\": \"11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/buyer/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"buyer",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seller",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"haha@email.com\",\n    \"password\" : \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/seller/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"seller",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seller_id\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/seller/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"seller",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seller_id\": \"1\",\n    \"product_name\": \"YA\",\n    \"description\": \"TEST YAAA\",\n    \"price\": 14000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/seller/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"seller",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_id\": \"22\",\n    \"seller_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/seller/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"seller",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seller_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/api/v1/seller/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"api",
+								"v1",
+								"seller",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
